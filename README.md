@@ -1,12 +1,46 @@
-# React + Vite
+# Resume Builder WebApp Plan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Input personal details, education, experience
+- Preview
+- Edit
 
-Currently, two official plugins are available:
+## Components
+- Header
+- Footer
+- Form
+- Section
+- FormField
+- Button
+- Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Form Section
 
-## Expanding the ESLint configuration
+### About
+- Name
+- Email
+- Phone
+- Summary
+### Education
+- Institution Name
+- Degree/Course
+- Graduation Date (Date Picker)
+### Experience
+- Company Name
+- Position
+- Description
+- Start Date
+- End Date
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## UX Flow
+
+```mermaid
+flowchart TD
+    A[Homepage: Display Form] --> B[User Fills Form]
+    B --> C[Submit Button Clicked]
+    C --> D[Show Resume Preview]
+    D --> E{Choose Action}
+    E -->|Edit| F[Return to Form]
+    E -->|Download| G[Download PDF]
+    F --> C
+```
